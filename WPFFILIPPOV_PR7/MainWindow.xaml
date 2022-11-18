@@ -7,36 +7,106 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-        </Grid.ColumnDefinitions>
-        <Grid.RowDefinitions>
-            <RowDefinition/>
-            <RowDefinition/>
-        </Grid.RowDefinitions>
-        <GroupBox Header="1-ые блюда" Padding="5" FontSize="23" Grid.Row="0" Grid.Column="0" VerticalAlignment="Center">
-            <StackPanel>
-                <RadioButton IsChecked="True" Margin="3">Суп Харчо</RadioButton>
-                <RadioButton Margin="3">Борщ</RadioButton>
-                <RadioButton Margin="3">Щи</RadioButton>
-            </StackPanel>
-        </GroupBox>
-        <GroupBox Header="2-ые блюда" Padding="5" FontSize="23" Grid.Row="0" Grid.Column="1" VerticalAlignment="Center">
-            <StackPanel>
-                <RadioButton IsChecked="True" Margin="3">Салат Оливье</RadioButton>
-                <RadioButton Margin="3">Котлеты по-киевски</RadioButton>
-                <RadioButton Margin="3">Селедка под шубой</RadioButton>
-            </StackPanel>
-        </GroupBox>
-        <GroupBox Header="Напитки" Padding="5" FontSize="23" Grid.Row="0" Grid.Column="2" VerticalAlignment="Center">
-            <StackPanel>
-                <RadioButton IsChecked="True" Margin="3">Сок</RadioButton>
-                <RadioButton Margin="3">Стакан чая</RadioButton>
-                <RadioButton Margin="3">Компот</RadioButton>
-            </StackPanel>
-        </GroupBox>
-        <Button x:Name="Order" Content="Заказать" Grid.Column="1" Grid.Row="1" FontSize="50" Height="100"/>
+        <StackPanel>
+            <RadioButton x:Name="M_g" GroupName="Photos" Content="Геркулес 200 рублей" Height="20" Checked="M_g_Checked">
+                <RadioButton.ToolTip>
+                    <ToolTip Width="200" Height="150">
+                        <StackPanel>
+                            <Image Source="Image/1.PNG" />
+                        </StackPanel>
+                    </ToolTip>
+                </RadioButton.ToolTip>
+            </RadioButton>
+            <Expander Header="Состав">
+                <TextBlock>Сто грамм сухих хлопьев Геркулес
+                2 стакана воды
+                70 грамм сахара
+                10 грамм сливочного масла
+                </TextBlock>
+            </Expander>
+        </StackPanel>
+        <StackPanel Margin="0,80,0,0">
+            <RadioButton Click="By" GroupName="Photos" Content="Булочка с сгущенкой 20 рублей" Height="20">
+                <RadioButton.ToolTip>
+                    <ToolTip Width="200" Height="150">
+                        <StackPanel>
+                            <Image Source="Image/1.PNG"/>
+                        </StackPanel>
+                    </ToolTip>
+                </RadioButton.ToolTip>
+            </RadioButton>
+            <Expander Header="Состав">
+                <TextBlock>
+                    Молоко, 
+                    масло сливочное, 
+                    мука, 
+                    дрожжи, 
+                    яйцо, 
+                    вареная сгущенка.
+                </TextBlock>
+            </Expander>
+        </StackPanel>
+        <StackPanel Margin="0,150,0,0">
+            <RadioButton Click="hai" GroupName="Photos" Content="Чай 10 рублей" Height="20" >
+                <RadioButton.ToolTip>
+                    <ToolTip Width="200" Height="150">
+                        <StackPanel>
+                            <Image Source="Image/1.PNG"/>
+                        </StackPanel>
+                    </ToolTip>
+                </RadioButton.ToolTip>
+            </RadioButton>
+            <Expander Header="Состав">
+                <TextBlock>
+                   Чай "Моя беседа",
+                    Горячая вода,
+                    Сахар.
+                </TextBlock>
+            </Expander>
+        </StackPanel>
+        <StackPanel Margin="0,220,225,0">
+            <RadioButton Click="MK" GroupName="Photos" Content="Котлета свиная 50 рублей" Height="20">
+                <RadioButton.ToolTip>
+                    <ToolTip Width="200" Height="150">
+                        <StackPanel>
+                            <Image Source="Image/1.PNG"/>
+                        </StackPanel>
+                    </ToolTip>
+                </RadioButton.ToolTip>
+            </RadioButton>
+            <Expander Header="Состав" Margin="0,0,225,0">
+                <TextBlock>
+                   Фарш свино-говяжий, 
+                    Яйца, 
+                    Лук,
+                    Батон, 
+                    Молоко,
+                    Специи, 
+                    Растительное масло, 
+                    Панировочные сухари.
+                </TextBlock>
+            </Expander>
+        </StackPanel>
+        <StackPanel Margin="0,290,0,53">
+            <RadioButton Click="M_KM" GroupName="Photos" Content="Картошка с мясом 250 рублей" Height="20">
+                <RadioButton.ToolTip>
+                    <ToolTip Width="200" Height="150">
+                        <StackPanel>
+                            <Image Source="Image/1.PNG"/>
+                        </StackPanel>
+                    </ToolTip>
+                </RadioButton.ToolTip>
+            </RadioButton>
+            <Expander Header="Состав">
+                <TextBlock>
+                   Картошка,
+                    Мясо,
+                    Лук,
+                    Чеснок.
+                </TextBlock>
+            </Expander>
+        </StackPanel>
+        <TextBox x:Name="Itog" Margin="440,10,21,116"></TextBox>
+        <TextBox Text="0" x:Name="Itog_3" Margin="440,327,46,22"></TextBox>
     </Grid>
 </Window>
